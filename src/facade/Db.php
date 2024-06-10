@@ -2,17 +2,17 @@
 
 namespace pms\facade;
 
-use pms\DbManager;
+use pms\db\Driver;
 use pms\Facade;
 
 /**
- * @see DbManager
- * @mixin DbManager
+ * @see Driver
+ * @mixin Driver
  */
 class Db extends Facade
 {
     protected static function getFacadeClass(): string
     {
-        return DbManager::class;
+        return Driver::class;
     }
 }

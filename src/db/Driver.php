@@ -1,18 +1,18 @@
 <?php
 
-namespace pms;
+namespace pms\db;
 
 use think\DbManager as Manager;
 
-class DbManager extends Manager
+class Driver extends Manager
 {
     protected array $connectors = [
-        'mysql' => db\connector\Mysql::class,
-        'mysql-pool' => db\connector\MysqlPool::class,
+        'mysql' => connector\Mysql::class,
+        'mysql-pool' => connector\MysqlPool::class,
     ];
 
     protected array $builders = [
-        'mysql' => db\builder\Mysql::class,
+        'mysql' => builder\Mysql::class,
     ];
 
     protected function getConnectionConfig(string $name): array{
